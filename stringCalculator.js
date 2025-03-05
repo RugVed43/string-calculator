@@ -11,6 +11,7 @@ function add(numbers) {
   }
 
   const numArray = numbers.split(delimiter).map(Number);
+
   // Check for negative numbers
   const negatives = numArray.filter((n) => n < 0);
   if (negatives.length) {
@@ -18,9 +19,6 @@ function add(numbers) {
       `Negative numbers are not allowed: ${negatives.join(", ")}`
     );
   }
-  //   console.log("🚀 ~ add ~ delimiter:", delimiter);
-  //   console.log("🚀 ~ add ~ numbers:", numbers);
-  //   console.log("🚀 ~ add ~ numArray:", numArray);
 
   return numArray.reduce((sum, num) => sum + num, 0); // Sum the numbers
 }
